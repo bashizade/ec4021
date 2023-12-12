@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    tr,td,th{
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+<body>
+<table border="2">
+    <tr>
+        <th>روز</th>
+        <th>نماز صبح</th>
+        <th>طلوع آفتاب</th>
+        <th>نماز ظهر</th>
+        <th>غروب آفتاب</th>
+        <th>نماز مغرب</th>
+        <th>نیمه شب</th>
+    </tr>
+    {% for result in results %}
+        <tr>
+            <td>{{result}}</td>
+            {% for res in results[result] %}
+                <td>{{res}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
